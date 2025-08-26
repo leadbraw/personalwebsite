@@ -1,0 +1,25 @@
+title:            Leadbraw
+description:      Leadbraw's Personal Site
+url:              https://leadbraw.com
+permalink:        /posts/:title
+timezone:         US/Pacific
+sass:
+  sass_dir: assets
+  style: :compressed
+collections:
+  notes:
+    output: true
+  pages:
+    output: true
+  stories:
+    output: true
+i18n:
+  en-US:
+    accessibility: Accessibility statement
+    source: View source
+include: [".well-known"]
+markdown: CommonMarkGhPages
+commonmark:
+  options: ["UNSAFE", "HARDBREAKS"]
+  extensions: ["strikethrough", "autolink", "table"]
+recent_date: "2025/07/30"
