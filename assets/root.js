@@ -3,13 +3,13 @@ function settime() {
   if (!timestamp || !('Intl' in window)) return
 
   const options = {
-    timeZone: "Asia/Taipei",
+    timeZone: "US/Pacific",
     timeStyle: "short",
     hour12: false
   }
 
   // https://gist.github.com/muan/e7414b6241f088090acd916ed965540e
-  let time = new Intl.DateTimeFormat(navigator.language || "zh-TW", options).format(new Date())
+  let time = new Intl.DateTimeFormat(navigator.language || "en", options).format(new Date())
 
   // Setting interpolated string instead of just the time because
   // if there's no JS there should be no mentions of current time
