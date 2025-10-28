@@ -118,15 +118,12 @@
       <hr class="hr">
       <nav class="monospace" aria-label="About this site">
         <p>Site design by <a href="https://muan.co">Mu-An Chiou</a></p>
-        <hr class="inline-hr">
-        <a href="https://github.com/leadbraw/personalwebsite">{{ site.i18n[lang].source }}</a>
       </nav>
     </footer>
     
     <script type="module" src="/assets/site.js"></script>
     {% if page.root %}
     <script type="module" src="/assets/root.js"></script>
-    <script type="module" src="https://unpkg.com/open-stories-element@latest"></script>
     {% endif %}
     {% if page.type == "photos" %}
       <script>
