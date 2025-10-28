@@ -591,10 +591,6 @@ figure {
   flex-wrap: wrap;
   margin: auto;
   gap: 0.5em;
-
-  open-heart {
-    margin-left: 0;
-  }
 }
 
 figcaption {
@@ -775,28 +771,6 @@ open-stories {
   font-weight: 300;
 }
 
-open-heart.text-open-heart {
-  display: inline;
-  transition: color .4s, border-color .4s;
-
-  &:not([disabled]):hover {
-    cursor: pointer;
-    color: var(--activeColor);
-  }
-
-  .on { display: none; }
-
-  &[aria-pressed="true"] {
-    border-color: var(--heartedBackgroundColor);
-    .on { display: initial; }
-    .off { display: none; }
-  }
-
-  &[count]:not([count="0"])::after {
-      content: "(" attr(count) ")";
-  }
-}
-
 kbd {
   border: 1px solid var(--borderColor);
   padding: 1px 4px;
@@ -863,10 +837,6 @@ nav {
     max-width: 98vw;
     border-radius: .5vh;
   }
-}
-
-open-heart:not(:defined) {
-  display: none !important;
 }
 
 [hidden] {

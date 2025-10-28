@@ -7,6 +7,8 @@ Code for https://leadbraw.com. original design by [Mu-An Chiou](https://github.c
 - HTML, CSS, Anti-JavaScript JavaScript
 - [RSS](https://en.wikipedia.org/wiki/RSS)
 - [Jekyll on GitHub Pages](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll)
+
+not yet:
 - [OpenHeart](https://github.com/dddddddddzzzz/OpenHeart), [`<open-heart>`](https://github.com/dddddddddzzzz/open-heart-element)
 
 ## Development
