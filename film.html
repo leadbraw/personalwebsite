@@ -9,7 +9,7 @@ title: Film
 {% assign photos = site.data.film | reverse %}
 {% for photo in photos %}
 <figure id="P{{ photo.id }}" class="figure-{% if photo.meta.ratio > 1 %}landscape{% else %}portrait{% endif %}">
-  {% capture image_url %}{% for url in photo.variants %}{% if url contains "/public" %}{{ url }}{% endif %}{% endfor %}{% endcapture %}
+  {% capture image_url %}{% for url in photo.variants %}{% if url contains "/images" %}{{ url }}{% endif %}{% endfor %}{% endcapture %}
   <a href="{{ image_url }}" class="image-link">
     <img 
       src="{{ image_url }}"

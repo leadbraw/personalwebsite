@@ -4,23 +4,14 @@ title: Questions & answers
 type: static
 ---
 
+## Where does the name come from?
 
-## How do you preferred to be called?
+It's gibberish. I was playing Dungeon Defenders with a friend circa 2015 and he named his character Leadbraw. It's a nonsense word that nonetheless stuck around in my head and became my username everywhere years later.
 
-**M**u-**A**n, or muan (only as a username, _never_ capitalized).
+## What is your mental state?
 
-## How is your name pronounced?
-
-<audio src="/assets/name.m4a" controls></audio>
+Frazzled and trying to remain grounded. Making (slow) progress.
 
 ## What are your pronouns?
 
-She/her/她/妳.
-
-## Where are you from?
-
-I am from Taipei, Taiwan.
-
-## Are you OK?
-
-[I am tired of my own thoughts.](https://muan.co/notes/2023-09-06-uu)
+he/him.

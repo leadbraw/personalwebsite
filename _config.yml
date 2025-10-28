@@ -11,11 +11,8 @@ collections:
     output: true
   pages:
     output: true
-  stories:
-    output: true
 i18n:
   en-US:
-    accessibility: Accessibility statement
     source: View source
 include: [".well-known"]
 markdown: CommonMarkGhPages

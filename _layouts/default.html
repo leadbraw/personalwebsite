@@ -13,10 +13,13 @@
     <link rel="me" href="https://micro.blog/muan">
     <link rel="alternate" type="application/rss+xml" href="/notes.xml">
     <link rel="apple-touch-icon" href="https://muan.co/assets/apple-touch-icon.png?v1">
-    <link rel="icon" href="/assets/apple-touch-icon.png?v1" type="image/png" sizes="500x500">
-    <link rel="icon" href="/assets/fav.svg?v1" type="image/svg+xml" sizes="24x24">
+    <!-- <link rel="icon" href="/assets/apple-touch-icon.png?v1" type="image/png" sizes="500x500"> -->
+    <link rel="icon" href="/assets/favicon_dbdfdf.png" type="image/png" sizes="32x32">
     <!--link rel="icon" href="/assets/fav.png" type="image/png" sizes="96x96"-->
-    <link href="https://fonts.googleapis.com/css2?family=Anuphan&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600&display=swap" rel="stylesheet">
     <link href="/assets/new.css" rel="stylesheet" type="text/css">
     {% if page.collection == "posts" %}
       <link href="/assets/syntax.css" rel="stylesheet" type="text/css">
@@ -30,7 +33,7 @@
       <meta content="{{ site.title }}" property="og:site_name">
       <meta content="{{ site.title }}" name="twitter:title">
     {% endif %}
-    {% if page.collection == "posts" or page.collection == "notes" or page.collection == "stories" %}
+    {% if page.collection == "posts" or page.collection == "notes" %}
       <meta content="article" property="og:type">
       <meta content="{{ site.url }}{{ page.url }}" property="og:url">
       <meta content="{{ page.content | strip_html | truncate: 240 }}" name="description">
@@ -70,20 +73,15 @@
   
   <body class="{% if page.root != true %}post-body{% endif %} col-{{ page.collection }}" data-page-type="{{ page.type }}">
     <header>
-      <div class="logo-container">
-        {% if page.root != true %}
-          <a href="/{% if page.collection == "notes" %}notes{% endif %}" aria-label="Home" class="back-link">&leftarrow;</a>
-        {% endif %}
-        <svg class="logo" viewBox="0 0 196 169" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <title>安</title>
-          <path d="M8 92.7061H188" stroke="#cccccc" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M53 50.3528H143" stroke="#cccccc" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M83.0002 8H113" stroke="#cccccc" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M53.3782 160.773C64.4534 151.592 86.0271 133.546 97.4226 133.546C112.866 133.546 113.373 160.773 126.168 160.773C138.963 160.773 150.185 155.479 150.185 155.479" stroke="#cccccc" stroke-width="16" stroke-linecap="round"/>
-        </svg>
-        {% if page.root != true %}
-          <span class="font">Mu-An Chiou</span>
-        {% endif %}
+    <div class="logo-container">
+      {% if page.root != true %}
+      <div style="margin-right: 0.75rem;">
+        <a href="/{% if page.collection == "notes" %}notes{% endif %}" aria-label="Home" class="back-link">&leftarrow;</a>
+      </div>
+      {% endif %}
+      {% if page.root != true %}
+        <span class="font">Leadbraw</span>
+      {% endif %}
       </div>
       <h1 class="h1">
         <span lang="{{lang}}">{{ page.title }}</span>
@@ -92,7 +90,7 @@
         <div class="desc" lang="en" data-status-loading hidden><span data-status-text></span> <time class="status-time monospace" data-status-datetime></time></div>
       {% endif %}
       {% if page.collection == "posts" %}<time class="monospace" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %e, %Y" }}</time>{% endif %}
-      {% if page.collection == "notes" or page.collection == "stories" %}<time class="monospace" datetime="{{ page.date }}">{{ page.date | date: "%Y/%m/%d %H:%M" }}</time>{% endif %}
+      {% if page.collection == "notes" %}<time class="monospace" datetime="{{ page.date }}">{{ page.date | date: "%Y/%m/%d %H:%M" }}</time>{% endif %}
       <div class="desc">{{ page.header_content }}</div>
     </header>
     <main>
@@ -144,15 +142,10 @@
     <footer>
       <hr class="hr">
       <nav class="monospace" aria-label="About this site">
-        <a href="/accessibility-statement">{{ site.i18n[lang].accessibility }}</a>
+        <p>Site design by <a href="https://muan.co">Mu-An Chiou</a></p>
         <hr class="inline-hr">
-        <a href="https://github.com/muan/site">{{ site.i18n[lang].source }}</a>
+        <a href="https://github.com/leadbraw/personalwebsite">{{ site.i18n[lang].source }}</a>
       </nav>
-      <p>
-        <a title="88×31" href="{% link _pages/banners.md %}"><img loading="lazy" src="/images/banner.svg" width="88" height="31" alt="Banner assets. An animated banner with one short line, one medium line, one long line, a symbol resembling the tilde, each being drawn in order."></a>
-        <a href="http://www.rssboard.org/rss-validator/"><img loading="lazy" src="/images/banners/valid-rss-rogers.png" width="88" height="31" alt="Valid RSS feeds available."></a>
-        <img loading="lazy" src="/images/banners/antijsjsclub.png" width="88" height="31" alt="Member, Anti JS JS Club"> 
-      </p>
     </footer>
     
     <script type="module" src="/assets/site.js"></script>
